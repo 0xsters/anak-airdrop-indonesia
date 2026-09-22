@@ -70,7 +70,7 @@ for post_id, text in posts:
 </html>"""
 
     (ROOT / "posts" / f"{slug}.html").write_text(page, encoding="utf-8")
-    post_links.append(f'<li><a href="/posts/{slug}.html">{html.escape(title)}</a></li>')
+    post_links.append(f'<li><a href="{SITE}/posts/{slug}.html">{html.escape(title)}</a></li>')
     urls.append(page_url)
 
 template = (ROOT / "index.html").read_text(encoding="utf-8")
